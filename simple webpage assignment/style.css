@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+body {
+    background: linear-gradient(-90deg, #79ADDC, #FFC09F, #FFEE93, #FCF5C7, #ADF7B6);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    margin-top: 2%;
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+}
+
+
+/* the scrollbar */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+ ::-webkit-scrollbar-track {
+    background-color: #FFC09F;
+    background: #FFC09F;
+    border-radius: 5px
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #d6dee1;
+    border-radius: 20px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background-color: #79ADDC;
+}
+
+h1 {
+    font-family: 'Akaya Telivigala', sans-serif;
+}
+
+li {
+    align-items: center;
+    list-style-position: inside;
+    font-size: 20px;
+}
+
+#que {
+    font-size: 28px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+hr {
+    height: 1px;
+    background-color: black;
+    width: 600px;
+}
+
+p {
+    font-size: 20px;
+}
+
+h2 {
+    font-weight: 700;
+    font-style: italic;
+}
+
+#button {
+    background-color: #79ADDC;
+    border: none;
+    color: black;
+    font-weight: 700;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
