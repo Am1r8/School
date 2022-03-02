@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Sumana:wght@700&display=swap");
+body {
+    /* align-items: center;
+    justify-content: center; */
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: 'Inter';
+    scroll-behavior: smooth;
+    text-align: center;
+    align-items: center;
+}
+
+
+/* The nav bar */
+
+#menu {
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    background: #507DBC;
+    width: 95%;
+    color: #FFF;
+    height: 55px;
+    padding-left: 18px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#menu ul,
+#menu li {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none
+}
+
+#menu ul {
+    width: 100%;
+}
+
+#menu li {
+    float: left;
+    display: inline;
+    position: relative;
+}
+
+#menu a {
+    display: block;
+    line-height: 55px;
+    padding: 0 24px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+#menu li a:hover {
+    color: #0099CC;
+    background: #A1C6EA;
+}
+
+#menu input {
+    display: none;
+    margin: 0;
+    padding: 0;
+    height: 55px;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    #menu {
+        position: relative
+    }
+    #menu ul {
+        background: #111;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 3;
+        height: auto;
+        display: none
+    }
+    #menu li {
+        display: block;
+        float: none;
+        width: auto;
+    }
+    #menu input,
+    #menu label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block
+    }
+    #menu input {
+        z-index: 4
+    }
+    #menu input:checked+label {
+        color: white
+    }
+    #menu input:checked+label:before {
+        content: "\00d7"
+    }
+    #menu input:checked~ul {
+        display: block
+    }
+}
+
+
+/* The banner */
+
+#header {
+    background-image: url(assets/about-me-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 3px -150px;
+    padding: 10px 40px;
+    width: 100%;
+    margin-left: -10px;
+    height: 550px;
+}
+
+.header-image {
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    margin-top: 100px;
+    border-radius: 30px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 50px;
+    color: white;
+    background-color: #507dbc;
+    padding: 10px 15px;
+}
+
+.header-image:hover {
+    background-color: #507dbc;
+    color: white;
+    -webkit-animation: scaling 5s infinite alternate;
+}
+
+.person {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 280px;
+}
+
+.container {
+    border-radius: 50%;
+    height: 312px;
+    -webkit-tap-highlight-color: transparent;
+    transform: scale(0.48);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 400px;
+}
+
+.container:after {
+    background-color: #f2f2f2;
+    content: "";
+    height: 10px;
+    position: absolute;
+    top: 390px;
+    width: 100%;
+}
+
+.container:hover {
+    transform: scale(0.54);
+}
+
+.container-inner {
+    clip-path: path( "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z");
+    position: relative;
+    transform-origin: 50%;
+    top: -200px;
+}
+
+.circle {
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 380px;
+    left: 10px;
+    pointer-events: none;
+    position: absolute;
+    top: 210px;
+    width: 380px;
+}
+
+.img {
+    pointer-events: none;
+    position: relative;
+    transform: translateY(20px) scale(1.15);
+    transform-origin: 50% bottom;
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container:hover .img {
+    transform: translateY(0) scale(1.2);
+}
+
+.divider {
+    background-color: #ca6060;
+    height: 4px;
+    border-radius: 50px;
+    width: 160px;
+}
+
+.name {
+    color: #404245;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 16px;
+    text-align: center;
+    transition: all .2s ease-in-out;
+}
+
+.name:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.title {
+    color: black;
+    font-size: 20px;
+    margin-top: 8px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.title:hover {
+    padding: 10px 20px;
+    background-color: #a1c6ea;
+    -webkit-animation: scaling 5s infinite alternate;
+}
+
+footer {
+    margin-top: 70px;
+    width: 100%;
+    height: 100px;
+    background-color: #04080F;
+    color: #DAE3E5;
+    text-align: center;
+}
+
+.footer-button {
+    -webkit-border-radius: 14;
+    -moz-border-radius: 14;
+    border-radius: 14px;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    background: #507DBC;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    outline: none;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.footer-button:hover {
+    background: #A1C6EA;
+    text-decoration: none;
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes scaling {
+    From {
+        -webkit-transform: scale(1.0);
+    }
+    To {
+        -webkit-transform: scale(1.1);
+    }
+}

@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #DAE3E5;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: 'Inter';
+    scroll-behavior: smooth;
+}
+
+
+/* The nav bar */
+
+#menu {
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    background: #507DBC;
+    width: 95%;
+    color: #FFF;
+    height: 55px;
+    padding-left: 18px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#menu ul,
+#menu li {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none
+}
+
+#menu ul {
+    width: 100%;
+}
+
+#menu li {
+    float: left;
+    display: inline;
+    position: relative;
+}
+
+#menu a {
+    display: block;
+    line-height: 55px;
+    padding: 0 24px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+#menu li a:hover {
+    color: #0099CC;
+    background: #A1C6EA;
+}
+
+#menu input {
+    display: none;
+    margin: 0;
+    padding: 0;
+    height: 55px;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    #menu {
+        position: relative
+    }
+    #menu ul {
+        background: #111;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 3;
+        height: auto;
+        display: none
+    }
+    #menu li {
+        display: block;
+        float: none;
+        width: auto;
+    }
+    #menu input,
+    #menu label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block
+    }
+    #menu input {
+        z-index: 4
+    }
+    #menu input:checked+label {
+        color: white
+    }
+    #menu input:checked+label:before {
+        content: "\00d7"
+    }
+    #menu input:checked~ul {
+        display: block
+    }
+}
+
+
+/* The banner */
+
+#header {
+    border: 0px;
+    background-image: url(assets/ban-future.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 3px -150px;
+    padding: 10px 40px;
+    width: 100%;
+    margin-left: -10px;
+    height: 550px;
+}
+
+.header-image {
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    /* position: absolute; */
+    margin-top: 100px;
+    border-radius: 30px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 50px;
+    color: white;
+    background-color: #507dbc;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+.header-image:hover {
+    background-color: #507dbc;
+    color: white;
+    -webkit-animation: scaling 5s infinite alternate;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    padding: 10px;
+    width: 600px;
+    left: 43%;
+    margin-left: -150px;
+    height: 400px;
+    top: 50%;
+    margin-top: -200px;
+    background: #FFF;
+    z-index: 20;
+    border-radius: 30px;
+}
+
+.ok {
+    -webkit-border-radius: 14;
+    -moz-border-radius: 14;
+    border-radius: 14px;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    background: #507DBC;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    outline: none;
+    margin-left: 15px;
+}
+
+.ok:hover {
+    background: #A1C6EA;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.head-pop-p {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.head-pop {
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+#popup2:after {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -2;
+}
+
+#popup2:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #dae3e5;
+    z-index: -1;
+    border-radius: 30px;
+}
+
+#popup3:after {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -2;
+}
+
+#popup3:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #dae3e5;
+    z-index: -1;
+    border-radius: 30px;
+}
+
+#popup4:after {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -2;
+}
+
+#popup4:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #dae3e5;
+    z-index: -1;
+    border-radius: 30px;
+}
+
+#popup5:after {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -2;
+}
+
+#popup5:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #dae3e5;
+    z-index: -1;
+    border-radius: 30px;
+}
+
+.img1 {
+    width: 45%;
+    border-radius: 30px;
+    margin-right: 40px;
+    margin-left: 40px;
+    transition: all .2s ease-in-out;
+}
+
+.img1:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.top {
+    -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    background-color: #a1c6ea;
+    padding: 10px 10px;
+    border-radius: 30px;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 30px;
+}
+
+.top:hover {
+    -webkit-animation: scaling 5s infinite alternate;
+}
+
+footer {
+    margin-top: 100px;
+    width: 100%;
+    height: 100px;
+    background-color: #04080F;
+    color: #DAE3E5;
+    text-align: center;
+}
+
+.footer-button {
+    -webkit-border-radius: 14;
+    -moz-border-radius: 14;
+    border-radius: 14px;
+    border: none;
+    color: #ffffff;
+    font-size: 20px;
+    background: #507DBC;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    outline: none;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.footer-button:hover {
+    background: #A1C6EA;
+    text-decoration: none;
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes scaling {
+    From {
+        -webkit-transform: scale(1.0);
+    }
+    To {
+        -webkit-transform: scale(1.1);
+    }
+}
